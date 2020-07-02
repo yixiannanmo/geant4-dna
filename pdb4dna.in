@@ -1,0 +1,20 @@
+#/control/execute vis.mac
+
+/run/initialize
+
+/tracking/verbose 0
+
+/PDB4DNA/det/loadPDB 1ZBB.pdb
+/PDB4DNA/det/buildBoundingV
+
+/PDB4DNA/event/setEnergyThres 17.5 eV #default value: 8.22 eV
+/PDB4DNA/event/setDistanceThres 3.4 nm    #default value: 10
+
+/gun/particle e-
+/gun/energy 100 keV
+
+/run/initialize
+
+/run/printProgress 100
+
+/run/beamOn 10000
